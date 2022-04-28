@@ -20,6 +20,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginFormComponent } from './login/login-form/login-form.component';
 import { RegisterFormComponent } from './register/register-form/register-form.component';
+import { HeaderAdminModeComponent } from './admin-mode/header-admin-mode/header-admin-mode.component';
+import { NavAdminModeComponent } from './admin-mode/nav-admin-mode/nav-admin-mode.component';
+import { DashboardAdminModeComponent } from './admin-mode/dashboard-admin-mode/dashboard-admin-mode.component';
 
 
 @NgModule({
@@ -40,7 +43,10 @@ import { RegisterFormComponent } from './register/register-form/register-form.co
     ProfileAvatarComponent,
     ProfileInfoComponent,
     LoginFormComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    HeaderAdminModeComponent,
+    NavAdminModeComponent,
+    DashboardAdminModeComponent
   ],
   imports: [
     BrowserModule,
