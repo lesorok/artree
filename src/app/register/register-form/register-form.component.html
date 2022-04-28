@@ -1,0 +1,43 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      formControlName="email"
+    >
+    <!--    <span class="helper-text red-text" *ngIf="form.get('email').invalid && form.get('email').touched">-->
+    <!--      <span *ngIf="form.get('email').errors['required']"> Email не должен быть пустым </span>-->
+    <!--      <span *ngIf="form.get('email').errors['email']"> Введите корректный Email адресс </span>-->
+    <!--    </span>-->
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      formControlName="password"
+    >
+    <!--    <span class="helper-text red-text" *ngIf="form.get('password').invalid && form.get('password').touched">-->
+    <!--      <span *ngIf="form.get('password').errors['required']"> Пароль не должен быть пустым </span>-->
+    <!--      <span *ngIf="form.get('password').errors['minlength'] && form.get('password').errors['minlength']['requiredLength']"> Введите пароль больше {{form.get('password').errors['minlength']['requiredLength']}} символов.-->
+    <!--        Сейчас {{form.get('password').errors['minlength']['actualLength']}} </span>-->
+    <!--    </span>-->
+    <label for="exampleInputPassword2" class="form-label">Password 2</label>
+    <input
+      type="password"
+      id="exampleInputPassword2"
+      class="form-control"
+      formControlName="password"
+    >
+  </div>
+  <button
+    type="submit"
+    class="btn btn-primary"
+    [disabled]="form.invalid"
+  > Зарегистрироваться
+  </button>
+</form>
