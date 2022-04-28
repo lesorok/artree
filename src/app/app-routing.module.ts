@@ -1,17 +1,14 @@
 import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
-import {LoginComponent} from "./login/login.component";
-import {AdminModeComponent} from "./admin-mode/admin-mode.component";
-import {RegisterComponent} from "./register/register.component";
-import {ProfileComponent} from "./profile/profile.component";
-import {TimelineComponent} from "./timeline/timeline.component";
 
 const routes: Routes = [
-  {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'profile', component: ProfileComponent},
-  {path: 'timeline', component: TimelineComponent},
-  {path: 'admin-mode', component: AdminModeComponent}
+  {path: 'category', loadChildren: () => import('./category/category.module').then(m => m.CategoryModule) },
+  {path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule)},
+  {path: 'register', loadChildren: () => import('./register/register.module').then(m => m.RegisterModule)},
+  {path: 'profile', loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)},
+  {path: 'timeline', loadChildren: () => import('./timeline/timeline.module').then(m => m.TimelineModule)},
+  {path: 'admin-mode', loadChildren: () => import('./admin-mode/admin-mode.module').then(m => m.AdminModeModule)},
+  {path: '', pathMatch: 'full', redirectTo: 'category'},
 ]
 @NgModule({
   imports: [
