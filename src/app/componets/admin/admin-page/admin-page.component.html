@@ -1,0 +1,5 @@
+<app-admin-dashboard
+  *ngIf="users$ | async as users"
+  [users]="users"
+  (deleteUser)="testMethod($event)"
+></app-admin-dashboard>
