@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
 import { AdminPageComponent } from "./admin-page/admin-page.component";
-import {CommonModule} from "@angular/common";
+import { CommonModule } from "@angular/common";
 
 const routes: Routes = [{
   path: '',
-  component: AdminPageComponent
+  component: AdminPageComponent,
 }]
 
 @NgModule({

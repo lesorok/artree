@@ -5,8 +5,8 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  
 })
+
 export class PostComponent implements OnInit {
 
   constructor() { }

@@ -9,7 +9,7 @@ import {AdminRoutingModule} from "../admin-routing.module";
   declarations: [
     AdminPageComponent,
     AdminNavComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
   ],
   imports: [
     CommonModule,
