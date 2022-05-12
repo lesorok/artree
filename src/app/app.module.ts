@@ -13,6 +13,8 @@ import { HeaderComponent } from "./componets/header/header.component";
 import { FooterComponent } from "./componets/footer/footer.component";
 import { SearchComponent } from './componets/search/search.component';
 import { UserDropdownComponent } from './componets/user/profile/user-dropdown/user-dropdown.component';
+import { NewPostPageComponent } from './componets/new-post/new-post-page/new-post-page.component';
+import { NewPostModule } from "./componets/new-post/new-post-page/componets/new-post/new-post.module";
 
 
 @NgModule({
@@ -21,7 +23,7 @@ import { UserDropdownComponent } from './componets/user/profile/user-dropdown/us
     HeaderComponent,
     FooterComponent,
     SearchComponent,
-    UserDropdownComponent
+    UserDropdownComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,9 +31,10 @@ import { UserDropdownComponent } from './componets/user/profile/user-dropdown/us
     AppRoutingModule,
     // RouterModule.forRoot([]),
     StoreModule.forRoot({}, {}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
     EffectsModule.forRoot([]),
-    StoreRouterConnectingModule.forRoot()
+    StoreRouterConnectingModule.forRoot(),
+    NewPostModule
   ],
   providers: [],
   bootstrap: [AppComponent]

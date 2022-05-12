@@ -1,5 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
 
 @Component({
   selector: 'app-login-form',
@@ -9,14 +9,18 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 })
 export class LoginFormComponent implements OnInit {
   form!: FormGroup;
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder) {
+  }
+
+  @Input() formError = '';
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      email: [null, [Validators.required, Validators.email]],
-      password: [null, [Validators.required, Validators.minLength(8)]]
+      login: new FormControl('',[Validators.required, Validators.email]),
+      password: new FormControl('',[Validators.required, Validators.minLength(8)])
     });
   }
+
   onSubmit() {
 
   }

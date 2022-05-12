@@ -19,12 +19,19 @@ const routes: Routes = [
   //     ),
   // },
 
-{
+  {
     path: 'categories',
     loadChildren: () =>
       import(
         './componets/categories/categories-page/categories-page.module'
-      ).then((m) => m.CategoriesPageModule),
+        ).then((m) => m.CategoriesPageModule),
+  },
+  {
+    path: 'feed/newpost',
+    loadChildren: () =>
+      import(
+        './componets/new-post/new-post-page/new-post-page.module'
+        ).then((m) => m.NewPostPageModule),
   },
   {
     path: 'login',
